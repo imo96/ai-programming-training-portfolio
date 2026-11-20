@@ -44,7 +44,7 @@
 flowchart LR
     subgraph Step1["【工程①】<br>要件定義の整理<br>・標準化"]
         direction TB
-        A1["受講生が<br>業務要件・機能を<br>Excelに整理"] --> A2["AntiGravity<br>(AI)に要件と<br>ひな形(HTML)<br>を入力"]
+        A1["受講生が<br>業務要件・<br>機能を<br>Excelに整理"] --> A2["AntiGravity<br>(AI)に要件と<br>ひな形(HTML)<br>を入力"]
         A2 --> A3["構造化された<br>要件定義書<br>(HTML)を<br>自動生成"]
         A3 --> A4["★ 要件レビュー<br>仕様漏れ・<br>曖昧さの<br>徹底排除"]
     end
@@ -58,7 +58,7 @@ flowchart LR
     subgraph Step3["【工程③】<br>AIコーディング<br>＆ 解析・検証"]
         direction TB
         C1["PDを<br>AntiGravityに<br>投入し<br>コード生成"] --> C2["静的解析・<br>プログラム<br>解析シートに<br>よる検証"]
-        C2 --> C3["★ コードレビュー<br>セキュリティ・<br>性能ボトル<br>ネック検証"]
+        C2 --> C3["★ コード<br>レビュー<br>セキュリティ・<br>性能ボトル<br>ネック検証"]
         C3 --> C4["AWS EC2 /<br>Tomcat環境へ<br>デプロイ・<br>100%完成"]
     end
 
