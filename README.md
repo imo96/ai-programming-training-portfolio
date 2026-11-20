@@ -40,24 +40,25 @@
 受講生が「AI任せのブラックボックス開発」に陥るのを防ぎ、 **「実務で通用する設計力・品質検証力」** を身につけるため、以下の3工程からなる設計書駆動型のAI開発フローを導入・指導しました。
 
 ```mermaid
+%%{init: {"flowchart": {"htmlLabels": false, "padding": 20, "nodeSpacing": 40, "rankSpacing": 50}}}%%
 flowchart LR
     subgraph Step1["【工程①】<br>要件定義の整理・標準化"]
         direction TB
-        A1["受講生が業務要件・機能を<br>Excelに整理"] --> A2["AntiGravity (AI) に<br>要件とひな形(HTML)を入力"]
-        A2 --> A3["構造化された<br>要件定義書(HTML)を自動生成"]
-        A3 --> A4["★ 要件レビュー<br>(仕様漏れ・曖昧さの徹底排除)"]
+        A1["受講生が業務要件・<br>機能をExcelに整理"] --> A2["AntiGravity (AI) に<br>要件とひな形(HTML)を<br>入力"]
+        A2 --> A3["構造化された<br>要件定義書(HTML)を<br>自動生成"]
+        A3 --> A4["★ 要件レビュー<br>(仕様漏れ・曖昧さの<br>徹底排除)"]
     end
 
     subgraph Step2["【工程②】<br>プログラム設計書 (PD) の策定"]
         direction TB
-        B1["要件定義書から<br>PDテンプレート(Excel)を展開"] --> B2["クラス設計・処理ロジック・<br>入出力・SQLを詳細化"]
-        B2 --> B3["★ PDレビュー<br>(境界値・例外処理・整合性検証)"]
+        B1["要件定義書から<br>PDテンプレート(Excel)<br>を展開"] --> B2["クラス設計・処理ロジック・<br>入出力・SQLを詳細化"]
+        B2 --> B3["★ PDレビュー<br>(境界値・例外処理・<br>整合性検証)"]
     end
 
     subgraph Step3["【工程③】<br>AIコーディング ＆ 解析・検証"]
         direction TB
-        C1["PDをAntiGravityに投入し<br>コード生成"] --> C2["静的解析・<br>プログラム解析シートによる検証"]
-        C2 --> C3["★ コードレビュー<br>(セキュリティ・性能ボトルネック検証)"]
+        C1["PDをAntiGravityに<br>投入しコード生成"] --> C2["静的解析・<br>プログラム解析シート<br>による検証"]
+        C2 --> C3["★ コードレビュー<br>(セキュリティ・性能<br>ボトルネック検証)"]
         C3 --> C4["AWS EC2 / Tomcat環境へ<br>デプロイ・100%完成"]
     end
 
